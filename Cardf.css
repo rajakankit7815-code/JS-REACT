@@ -1,0 +1,13 @@
+#box{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+    border-radius: 20px;
+
+}
+li{
+    color: aliceblue;
+    padding: 20px;
+}

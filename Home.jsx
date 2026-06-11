@@ -1,16 +1,26 @@
+// import React from 'react'
+
+// const Home = ({data}) => {
+//     console.log(data)
+//   return (
+//     <div>Home </div>
+//   )
+// }
+// const New = () =>{
+//     return(
+//         <div>neww filee</div>
+//     )
+// }
+// export {New} 
+
+// export default Home
+
 import React from 'react'
 
-const Home = ({data}) => {
-    console.log(data)
+function Home() {
   return (
-    <div>Home </div>
+    <div>Homeee</div>
   )
 }
-const New = () =>{
-    return(
-        <div>neww filee</div>
-    )
-}
-export {New} 
 
 export default Home
