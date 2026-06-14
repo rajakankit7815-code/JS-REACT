@@ -202,32 +202,71 @@
 
 
 
-import React from 'react'
-import Home from "./Home"
+// import React, { useState } from 'react'
+// import Home from "./Home"
 
 //main-> app-> A-> b-> C
 
 
 
-import NavBar from "./NavBar"
+// import NavBar from "./NavBar"
 
-import { Route, Routes } from "react-router-dom"
-import Cart from "./Cart"
+// import { Route, Routes } from "react-router-dom"
+// import Cart from "./Cart"
 
-const App = () => {
-  let [apiData,SetApiData] =   useState([])
- let [cart,SetCart]= useState([])
+// const App = () => {
+//   let [apiData,SetApiData] =   useState([])
+//  let [cart,SetCart]= useState([])
+//   return (
+
+//     <div>
+//       <NavBar/>
+//       <Routes>
+//         <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
+//         <Route path="/cart" element={<Cart cart={cart}/>}/>
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+import { useState } from "react";
+import songs from "./Songs";
+
+
+function App() {
+  const [currentSong, setCurrentSong]=useState(null);
   return (
-
     <div>
-      <NavBar/>
-      <Routes>
-        <Route path="/" element={<Home apiData={apiData}  SetApiData={SetApiData} cart={cart}  SetCart={SetCart}/>}/>
-        <Route path="/cart" element={<Cart cart={cart}/>}/>
-
-      </Routes>
+      <h1>Spotify Clone</h1>
+      {songs.map((song) => (
+        <div key={song.id}>
+          <h3>{song.title}</h3>
+          <p>{song.artist}</p>
+          <button onClick={()=>setCurrentSong(song)}>Play</button>
+           <audio controls>
+        <source
+          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+          </div>
+      ))}{currentSong && (
+        <audio
+          src={currentSong.audio}
+          controls
+          autoPlay
+        />
+      )}
     </div>
-  )
+  );
 }
+
 
 export default App
