@@ -236,37 +236,60 @@
 
 
 
-import { useState } from "react";
-import songs from "./Songs";
+// import { useState } from "react";
+// import songs from "./Songs";
 
 
-function App() {
-  const [currentSong, setCurrentSong]=useState(null);
+// function App() {
+//   const [currentSong, setCurrentSong]=useState(null);
+//   return (
+//     <div>
+//       <h1>Spotify Clone</h1>
+//       {songs.map((song) => (
+//         <div key={song.id}>
+//           <h3>{song.title}</h3>
+//           <p>{song.artist}</p>
+//           <button onClick={()=>setCurrentSong(song)}>Play</button>
+//            <audio controls>
+//         <source
+//           src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+//           type="audio/mpeg"
+//         />
+//       </audio>
+//           </div>
+//       ))}{currentSong && (
+//         <audio
+//           src={currentSong.audio}
+//           controls
+//           autoPlay
+//         />
+//       )}
+//     </div>
+//   );
+// }
+
+
+// export default App
+
+
+
+
+import React from 'react'
+import Home from "./Home"
+import UserList from "./UserList"
+import { Route, Routes } from "react-router-dom"
+import UserProfile from "./UserProfile"
+
+const App = () => {
   return (
     <div>
-      <h1>Spotify Clone</h1>
-      {songs.map((song) => (
-        <div key={song.id}>
-          <h3>{song.title}</h3>
-          <p>{song.artist}</p>
-          <button onClick={()=>setCurrentSong(song)}>Play</button>
-           <audio controls>
-        <source
-          src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
-          type="audio/mpeg"
-        />
-      </audio>
-          </div>
-      ))}{currentSong && (
-        <audio
-          src={currentSong.audio}
-          controls
-          autoPlay
-        />
-      )}
+      <Home/>
+     {/* http://localhost:5173/profile/0 */}
+      <Routes>
+        <Route   path="/"   element={ <UserList/>}/>
+        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
+      </Routes>
     </div>
-  );
+  )
 }
-
-
 export default App
