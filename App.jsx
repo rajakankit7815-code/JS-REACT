@@ -274,22 +274,38 @@
 
 
 
-import React from 'react'
-import Home from "./Home"
-import UserList from "./UserList"
-import { Route, Routes } from "react-router-dom"
-import UserProfile from "./UserProfile"
+// import React from 'react'
+// import Home from "./Home"
+// import UserList from "./UserList"
+// import { Route, Routes } from "react-router-dom"
+// import UserProfile from "./UserProfile"
 
-const App = () => {
+// const App = () => {
+//   return (
+//     <div>
+//       <Home/>
+//      {/* http://localhost:5173/profile/0 */}
+//       <Routes>
+//         <Route   path="/"   element={ <UserList/>}/>
+//         <Route   path="/profile/:id"   element={ <UserProfile/>}/>
+//       </Routes>
+//     </div>
+//   )
+// }
+// export default App
+
+
+
+
+import React from 'react'
+import ChatBoat from './ChatBoat'
+
+function App() {
   return (
     <div>
-      <Home/>
-     {/* http://localhost:5173/profile/0 */}
-      <Routes>
-        <Route   path="/"   element={ <UserList/>}/>
-        <Route   path="/profile/:id"   element={ <UserProfile/>}/>
-      </Routes>
+      <ChatBoat/>
     </div>
   )
 }
+
 export default App

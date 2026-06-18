@@ -1,0 +1,49 @@
+.box{
+    width: 300px;
+    min-height: 500px;
+    border: 1px solid #0d0ddc;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+}
+
+.box input{
+    margin-top: auto; /* input ko neeche bhej dega */
+    margin-bottom: 10px;
+}
+
+.box button{
+    width: 100px;
+}
+
+/* .box{
+  width: 300px;
+  min-height: 500px;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #bfa5a5;
+  border: 1px solid #ddd;
+  justify-content: space-between;
+} */
+body{
+    margin: 0;
+}
+
+.main{
+    /* display: flex; */
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
+    /* min-height: ; */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
