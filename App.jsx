@@ -297,13 +297,28 @@
 
 
 
+// import React from 'react'
+// import ChatBoat from './ChatBoat'
+
+// function App() {
+//   return (
+//     <div>
+//       <ChatBoat/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
 import React from 'react'
-import ChatBoat from './ChatBoat'
+import Claude from './Claude'
 
 function App() {
   return (
     <div>
-      <ChatBoat/>
+      <Claude/>
     </div>
   )
 }
